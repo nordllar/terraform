@@ -4,8 +4,20 @@ variable "server_port" {
   default = 8080
 }
 
-variable "security_group_name" {
-  description = "The name of the security group"
-  type        = string
-  default     = "terraform-example-instance"
+variable "alb_name" {
+  description = "The name of the ALB"
+  type = string
+  default = "terraform-asg-example"
+}
+
+variable "instance_security_group_name" {
+  description = "The name of the security group for the EC2 instance"
+  type = string
+  default = "terraform-example-instance"
+}
+
+variable "alb_security_group_name" {
+  description = "The name of the security group for ALB"
+  type = string
+  default = "terraform-example-alb"
 }
